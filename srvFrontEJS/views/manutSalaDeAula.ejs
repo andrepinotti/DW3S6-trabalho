@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/5.0.0/css/bootstrap.min.css">
+  <title>Manutenção de Salas de Aula</title>
+</head>
+<body>
+  <div class="container">
+    <h1>Salas de Aula</h1>
+    <table class="table">
+      <thead>
+        <tr>
+          <th>ID</th>
+          <th>Descrição</th>
+          <th>Localização</th>
+          <th>Capacidade</th>
+          <th>Removido</th>
+        </tr>
+      </thead>
+      <tbody>
+        <% salas.forEach(sala => { %>
+          <tr>
+            <td><%= sala.salasdeaulaid %></td>
+            <td><%= sala.descricao %></td>
+            <td><%= sala.localizacao %></td>
+            <td><%= sala.capacidade %></td>
+            <td><%= sala.removido %></td>
+          </tr>
+        <% }); %>
+      </tbody>
+    </table>
+    <a href="/" class="btn btn-secondary">Voltar</a>
+  </div>
+</body>
+</html>
