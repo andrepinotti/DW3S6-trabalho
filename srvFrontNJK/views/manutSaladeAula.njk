@@ -3,35 +3,41 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/5.0.0/css/bootstrap.min.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/bootstrap/5.3.3/css/bootstrap.min.css">
   <title>Manutenção de Salas de Aula</title>
 </head>
 <body>
-  <div class="container">
-    <h1>Salas de Aula</h1>
-    <table class="table">
-      <thead>
-        <tr>
-          <th>ID</th>
-          <th>Descrição</th>
-          <th>Localização</th>
-          <th>Capacidade</th>
-          <th>Removido</th>
-        </tr>
-      </thead>
-      <tbody>
-        {% for sala in salas %}
+  <div class="container mt-5">
+    <h1 class="text-center display-4 mb-4">Salas de Aula</h1>
+    <div class="table-responsive">
+      <table class="table table-striped table-hover table-bordered align-middle text-center">
+        <thead class="table-dark">
           <tr>
-            <td>{{ sala.salasdeaulaid }}</td>
-            <td>{{ sala.descricao }}</td>
-            <td>{{ sala.localizacao }}</td>
-            <td>{{ sala.capacidade }}</td>
-            <td>{{ sala.removido }}</td>
+            <th scope="col">ID</th>
+            <th scope="col">Descrição</th>
+            <th scope="col">Localização</th>
+            <th scope="col">Capacidade</th>
+            <th scope="col">Removido</th>
           </tr>
-        {% endfor %}
-      </tbody>
-    </table>
-    <a href="/" class="btn btn-secondary">Voltar</a>
+        </thead>
+        <tbody>
+          {% for sala in salas %}
+            <tr>
+              <td>{{ sala.salasdeaulaid }}</td>
+              <td>{{ sala.descricao }}</td>
+              <td>{{ sala.localizacao }}</td>
+              <td>{{ sala.capacidade }}</td>
+              <td>{{ sala.removido }}</td> 
+            </tr>
+          {% endfor %}
+        </tbody>
+      </table>
+    </div>
+    <div class="text-center mt-4">
+      <a href="/" class="btn btn-secondary">Voltar</a>
+    </div>
   </div>
+
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/bootstrap/5.3.3/js/bootstrap.bundle.min.js"></script>
 </body>
 </html>
